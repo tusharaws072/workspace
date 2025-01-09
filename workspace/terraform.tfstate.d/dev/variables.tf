@@ -39,11 +39,11 @@ variable "nat_eip_allocation_id" {
 
 
 
-#variable "region" {
- # description = "AWS region"
- # type        = string
- # default     = "ap-southeast-1" # Singapore region
-#}
+variable "region" {
+  description = "AWS region"
+  type        = string
+  default     = "ap-southeast-1" # Singapore region
+}
 
 #variable "access_key" {
 #  description = "AWS access key for authentication."
