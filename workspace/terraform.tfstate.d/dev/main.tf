@@ -55,26 +55,26 @@ module "ec2" {
 
 
 # RDS Module Configuration
-module "rds" {
-  source                 = "./modules/rds"
-  db_instance_identifier = var.db_instance_identifier
-  db_name                = var.db_name
-  username               = var.username
-  #password               = var.password
-  db_instance_class   = var.db_instance_class
-  allocated_storage   = var.allocated_storage
-  engine              = var.engine
-  engine_version      = var.engine_version
-  subnet_ids          = module.vpc.private_subnets # [module.vpc.private_subnets[0]] #   subnet_ids = module.vpc.private_subnets
-  vpc_id              = module.vpc.vpc_id
-  security_group_name = "rds-sg"
-  project_name        = var.project_name
-  stage_name          = var.stage_name
-  tags = {
-    Name = "EC2-instance"
-    Env  = var.environment
-  }
-}
+#module "rds" {
+ # source                 = "./modules/rds"
+ # db_instance_identifier = var.db_instance_identifier
+ # db_name                = var.db_name
+ # username               = var.username
+ # #password               = var.password
+ # db_instance_class   = var.db_instance_class
+ # allocated_storage   = var.allocated_storage
+ # engine              = var.engine
+ # engine_version      = var.engine_version
+ # subnet_ids          = module.vpc.private_subnets # [module.vpc.private_subnets[0]] #   subnet_ids = module.vpc.private_subnets
+ # vpc_id              = module.vpc.vpc_id
+ # security_group_name = "rds-sg"
+ # project_name        = var.project_name
+ # stage_name          = var.stage_name
+ # tags = {
+ #   Name = "EC2-instance"
+ #   Env  = var.environment
+ # }
+#}
 
 
 
