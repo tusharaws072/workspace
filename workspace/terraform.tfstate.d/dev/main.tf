@@ -10,9 +10,15 @@ module "vpc" {
   availability_zones         = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
   nat_eip_allocation_id      = aws_eip.nat.id
 }
+#resource "aws_eip" "nat" {
+ # vpc = true
+#}
 resource "aws_eip" "nat" {
-  vpc = true
+  domain = "vpc"
 }
+
+
+
 
 ########### EC2 ################
 
